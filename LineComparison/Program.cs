@@ -1,5 +1,4 @@
-﻿Console.WriteLine("Line Comparison Computation");
-class Program
+﻿class Program
 {
     static void Main(string[] args)
     {
@@ -14,15 +13,26 @@ class Program
         int a2 = Convert.ToInt32(Console.ReadLine());
         int b2 = Convert.ToInt32(Console.ReadLine());
 
-        //UC1-->Finding the length of each line
-        //Formula for first line
+        
         double Length_of_first_Line = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-        //Formula for second line
+        
         double Length_of_second_Line = Math.Sqrt(Math.Pow((a2 - a1), 2) + Math.Pow((b2 - b1), 2));
 
         Console.WriteLine("First line length is : " + Length_of_first_Line);
 
         Console.WriteLine("Second line length is : " + Length_of_second_Line);
+
+        Console.WriteLine("---------------------------------------------------");
+
+        
+        if (Length_of_first_Line.Equals(Length_of_second_Line))
+        {
+            Console.WriteLine("Both Lines Are Equal");
+        }
+        else
+        {
+            Console.WriteLine("Both Lines Are Not Equal");
+        }
 
         Console.Read();
     }
